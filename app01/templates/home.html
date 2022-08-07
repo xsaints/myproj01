@@ -13,13 +13,17 @@
         <img src = "{% static 'images/me.png' %}" alt= "uh oh" />	
     </div>
 
-    <div class="my-applications">
-      
-        <p><img src = "#">
-        <a class= "left" href= "{% url 'app01:all_samples' %}">My Sample App</a></p>
+
+    <div class="container">
+        <div class="my-applications">
+          
+            <p><img src = "{% static 'images/expenses.jpg' %}">
+            <br />
+            <a class= "left" href= "{% url 'app01:all_samples' %}">My Sample App</a></p>
+
+        </div>
 
     </div>
-
 {% endblock %}
 
 
