@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body-blk %}
+
+	<h1>Sample</h1>
+	
+	<ul>
+	{% for s in samples %}
+		<li>{{ s.txn_date }} {{ s.txn_desc }} {{ e.txn_amt }}</a> </li>
+	{% endfor %}
+	</ul>
+
+{% endblock %}
