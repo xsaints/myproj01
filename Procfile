@@ -1,1 +1,1 @@
-web: gunicorn lifeb0x10.wsgi --log-file -
+web: gunicorn myproj01.wsgi --log-file -
