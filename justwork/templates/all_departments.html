@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}  
+
+{% block body-blk %}
+
+    <div class="row">
+    
+        <p>Departments</p>
+        
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Department ID</th>
+              <th scope="col">Department Name</th>
+              <th scope="col">Manager ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for d in departments %}      
+            <tr>
+              <th scope="row">1</th>
+              <td>{{ d.department_id }}</td>
+              <td>{{ d.department_name }}</td>
+              <td>{{ d.manager_id }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+        <!--
+        <ul>
+        {% for e in departments %}
+            <li>{{ e.department_name }} {{ e.manager_id }} {{ e.location_id }}</a> </li>
+        {% endfor %}
+        </ul>
+        -->
+
+        <p><a href= "{% url 'justwork:new_department' %}">Add new department</a></p>
+
+    </div>
+    
+{% endblock %}

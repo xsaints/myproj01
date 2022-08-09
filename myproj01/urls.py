@@ -21,6 +21,7 @@ from . import views
 
 
 urlpatterns = [
+    path('justwork/', include('justwork.urls')),
     path('app01/', include('app01.urls')),
     
     path('', views.home, name= 'home'),

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load django_bootstrap5 %}  
+{% load static %}
+
+{% block css-blk-2 %}
+    <link rel= "stylesheet" type= "text/css" href= "{% static 'css/meh01.css' %}" />
+{% endblock %}
+
+{% block body-blk %}
+
+    <div class="user-pic">
+        <img src = "{% static 'images/me.png' %}" alt= "uh oh" />	
+    </div>
+
+
+    <div class="row">
+        <div class="col-4">
+            <div class="container">
+                <div class="my-applications">
+                  
+                    <p><img src = "{% static 'images/expenses.jpg' %}">
+                    <br />
+                    <a class= "left" href= "{% url 'app01:all_samples' %}">My Sample App</a></p>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-4">
+        </div>
+        <div class="col-4">
+        </div>
+
+        
+    </div>
+{% endblock %}
+
+
+{% block navig-blk %}
+    <p>My Applications</p>
+{% endblock %}

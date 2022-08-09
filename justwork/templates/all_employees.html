@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}  
+
+{% block body-blk %}
+
+    <div class="row">
+        <div class="col">
+            <p>Employees</p>
+            
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for e in employees %}      
+                <tr>
+                  <th scope="row">1</th>
+                  <td>{{ e.first_name }}</td>
+                  <td>{{ e.last_name }}</td>
+                  <td>{{ e.hire_date}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            
+            
+            <p><a href= "{% url 'justwork:new_employee' %}">Add new employee</a></p>    
+        </div>
+       
+            
+    </div>
+    
+    <!--
+	<ul>
+	{% for e in employees %}
+		<li>{{ e.first_name }} {{ e.last_name }} {{ e.hire_date }}</a> </li>
+	{% endfor %}
+	</ul>
+    -->
+
+{% endblock %}

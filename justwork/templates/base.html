@@ -1,0 +1,87 @@
+<!doctype html>
+
+{% load django_bootstrap5 %}  
+{% load static %}
+   
+    
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% bootstrap_messages %}
+
+    <link rel="icon" href="{% static "images/v.png" %}">        
+            
+	<title>
+        {% block title-blk %}
+            just work
+        {% endblock %}
+	</title>
+
+	{% block css-blk %}
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet">
+    {% endblock %}
+
+	{% block css-blk-2 %}
+    {% endblock %}
+    
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="row">
+            {% block header-blk %}        
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                        <a class="navbar-brand" href="{% url 'home' %}">
+                          <img src="{% static 'images/straitjacket_logo_transparent.png' %}" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                          straitjacket
+                        </a>
+                  </div>
+                </nav>        
+            {% endblock %}
+
+            {% block subheader-blk %}
+            {% endblock %}
+
+            <div class="col">
+                {% block navig-blk %}
+                {% endblock %}
+            </div>
+            
+            <div class="col-8">
+
+            {% block body-blk %}
+                <p>This is the base body block.</p>
+            {% endblock %}
+            </div>
+
+            <div class="col">
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col-6">
+            {% block footer-blk %}
+                <div class="copyleft" style= "color:blue; font-size:13px">
+                    <p>(c) copyleft mmxxii. no rights reserved. do not call x-xxx-xxx-xxxx</p>
+                </div>
+            {% endblock %}
+            </div>
+            
+            <div class="col">
+            </div>
+            
+            <div class="col">
+            </div>
+        </div>
+    </div>
+    
+  </body>
+</html>
