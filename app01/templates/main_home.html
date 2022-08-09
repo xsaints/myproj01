@@ -1,0 +1,35 @@
+{% extends 'main_base.html' %}
+
+{% load django_bootstrap5 %}  
+{% load static %}
+
+{% block css-blk-2 %}
+    <link rel= "stylesheet" type= "text/css" href= "{% static 'css/meh01.css' %}" />
+{% endblock %}
+
+{% block body-blk %}
+
+    <!--
+    <div class="user-pic">
+        <img src = "{% static 'images/me.png' %}" alt= "uh oh" />	
+    </div>
+    -->
+
+    <div class="container">
+        <div class="row my-applications">
+
+            <div class="col">
+                <p>
+                    <a href= "{% url 'justwork:index' %}"><img src = "{% static 'images/justwork.jpg' %}"></a>
+                </p>
+              
+                <p>
+                    <a class= "left" href= "{% url 'app01:all_samples' %}"><img src = "{% static 'images/expenses.jpg' %}"></a>
+                </p>
+            </div>
+            
+        </div>
+
+    </div>
+{% endblock %}
+

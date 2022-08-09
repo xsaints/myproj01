@@ -24,7 +24,7 @@ urlpatterns = [
     path('justwork/', include('justwork.urls')),
     path('app01/', include('app01.urls')),
     
-    path('', views.home, name= 'home'),
+    path('', views.main_home, name= 'main_home'),
     
     path('admin/', admin.site.urls),
 ]

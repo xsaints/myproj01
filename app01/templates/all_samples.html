@@ -3,11 +3,13 @@
 
 {% block body-blk %}
 
-	<h1>Sample</h1>
+	<p>Sample</p>
 	
 	<ul>
 	{% for s in samples %}
 		<li>{{ s.txn_date }} {{ s.txn_desc }} {{ e.txn_amt }}</a> </li>
+    {% empty %}
+        <p>No samples yet.</p>
 	{% endfor %}
 	</ul>
 
