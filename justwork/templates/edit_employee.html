@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}  
+
+{% block body-blk %}
+
+    <div class="row">
+        <div class="col">
+            <p><strong>Employees</strong></p>
+
+        <form action= "{% url 'justwork:edit_employee' employee.id %}" method= "POST">
+            {% bootstrap_form form %}
+            {% csrf_token %}
+
+            <button name= "submit">Save employee</button>
+
+        </form>
+        </div>
+    </div>
+
+{% endblock %}

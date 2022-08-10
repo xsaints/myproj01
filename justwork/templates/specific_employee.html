@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}  
+
+{% block body-blk %}
+
+    <div class="row">
+        <div class="col">
+            <p><strong>Employees</strong></p>
+            
+
+            {{ emp }}
+            
+            <a href= "{% url 'justwork:edit_employee' emp.id %}">Edit</a>            
+        </div>
+    </div>
+{% endblock %}

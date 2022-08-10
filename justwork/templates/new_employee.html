@@ -3,7 +3,7 @@
 
 {% block body-blk %}
     <div>
-	<h1>New employee</h1>
+	<p>New employee</p>
 	<form action= "{% url 'justwork:new_employee' %}" method= "POST">
 		{% csrf_token %}
         

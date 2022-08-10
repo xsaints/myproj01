@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}  
+
+
+{% block body-blk %}
+
+    <p>Employees<p>
+        <a href= "{% url 'justwork:all_employees' %}"><img src= "{% static 'images/people.jpg' %}"></a>       
+    
+    <p>Departments<p>
+        <a href= "{% url 'justwork:all_departments' %}"><img src= "{% static 'images/departments.jpg' %}"></a>
+    
+        
+{% endblock %}    

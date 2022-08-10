@@ -20,7 +20,7 @@
                 {% for e in employees %}      
                 <tr>
                   <th scope="row">{{ e.id }}</th>
-                  <td>{{ e.first_name }}</td>
+                  <td><a href= "{% url 'justwork:specific_employee' e.id %}">{{ e.first_name }}</a></td>
                   <td>{{ e.department_id.department_name }}</td>
                   <td>{{ e.hire_date}}</td>
                 </tr>
