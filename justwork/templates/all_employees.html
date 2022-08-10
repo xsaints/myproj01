@@ -5,23 +5,23 @@
 
     <div class="row">
         <div class="col">
-            <p>Employees</p>
+            <p><strong>Employees</strong></p>
             
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col">ID</th>
                   <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Handle</th>
+                  <th scope="col">Department</th>
+                  <th scope="col">Hire Date</th>                  
                 </tr>
               </thead>
               <tbody>
                 {% for e in employees %}      
                 <tr>
-                  <th scope="row">1</th>
+                  <th scope="row">{{ e.id }}</th>
                   <td>{{ e.first_name }}</td>
-                  <td>{{ e.last_name }}</td>
+                  <td>{{ e.department_id.department_name }}</td>
                   <td>{{ e.hire_date}}</td>
                 </tr>
                 {% endfor %}

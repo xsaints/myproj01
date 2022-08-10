@@ -11,7 +11,6 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Department ID</th>
               <th scope="col">Department Name</th>
               <th scope="col">Manager ID</th>
             </tr>
@@ -19,8 +18,7 @@
           <tbody>
             {% for d in departments %}      
             <tr>
-              <th scope="row">1</th>
-              <td>{{ d.department_id }}</td>
+              <th scope="row">{{ d.id }}</th>
               <td>{{ d.department_name }}</td>
               <td>{{ d.manager_id }}</td>
             </tr>
