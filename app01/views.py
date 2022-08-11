@@ -13,7 +13,7 @@ def index(request):
 	return render(request, 'index.html', {'name': 'Sample Tracker'})   
 '''
 
-def all_samples(request):
+def all_expenses(request):
 	samples= Sample.objects.all()
 	return render(request, 'all_expenses.html', {'name': 'Sample Tracker', 'expenses': samples})	    
     

@@ -7,6 +7,6 @@ urlpatterns = [
 	#path('', views.index, name = 'index'),
     
 	# list all expenses
-	path('', views.all_samples, name= 'all_samples'),
+	path('', views.all_expenses, name= 'all_expenses'),
     
 ]    
