@@ -15,5 +15,5 @@ def index(request):
 
 def all_samples(request):
 	samples= Sample.objects.all()
-	return render(request, 'all_samples.html', {'name': 'Sample Tracker', 'samples': samples})	    
+	return render(request, 'all_expenses.html', {'name': 'Sample Tracker', 'expenses': samples})	    
     

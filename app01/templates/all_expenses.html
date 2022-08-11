@@ -1,0 +1,16 @@
+{% extends 'base2.html' %}
+{% load django_bootstrap5 %}  
+
+{% block body-blk %}
+
+	<p><strong>Expenses</strong></p>
+	
+	<ul>
+	{% for e in expenses %}
+		<li>{{ e.txn_date }} {{ e.txn_desc }} {{ e.txn_amt }}</a> </li>
+    {% empty %}
+        <p>No expenses yet.</p>
+	{% endfor %}
+	</ul>
+
+{% endblock %}
